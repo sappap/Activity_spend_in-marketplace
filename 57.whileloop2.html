@@ -1,0 +1,84 @@
+<!--Code: Made by Saurabh Pahune-->
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    
+    <meta charset="utf-8">
+    
+    <title> while loop </title>
+    
+    
+    </head>
+    
+<body>
+    
+<!--    <p id="paragraph"> Javascript </p> -->
+    
+    
+<p id="balance" > current balance: $1000 at begining  </p>
+    
+    <button onclick="initiatgame()"> Submit </button>
+    
+    
+<!--    here button function name ,now call that function nAME-->
+    
+   
+     
+<!--//        var i =0;-->
+        
+<!--//        while(i<5){-->
+            
+<!--<!--//     document.getElementById("paragraph").innerHTML += "<br />" + i-->
+<!--//        i++;-->
+<!--//     }-->
+    
+    
+         <script>
+        
+        function initiatgame() {    //           now call that function nAME--> 
+            
+        var balance=1000; 
+        
+        var itembought=0; //        begining bought '0' items.
+        
+        
+        while(balance>0){
+            
+//            balance positive will buystuff from 0-100 price
+
+//            below itemprice tag between 0 to 100 if balance positive,Math.random gives between 0 -1. mul 100, Math.floor changes to whole no.99.9=99
+        
+               var itemprice= Math.floor(Math.random()*100);     //               now itemprice to but betweeno-100.
+            
+            
+            
+//            need to test our item price within a blance or not
+            
+            if(itemprice <= balance){
+                
+                
+                itembought += 1;          //                if condition true it will buy item by one every time 
+                
+                  balance -= itemprice;                        //                and balance reduce by itemprice
+                
+                
+                document.getElementById("balance").innerHTML += "<p> purchase amount: $ " + itemprice + " NEW BALANCE: $ " + balance +  ". </p>";
+                
+//                how many no. of items bought
+                
+                document.getElementById("balance").innerHTML += "<p> you bought  "+ itembought + " no. of items. </p>"
+                
+            }
+            
+    }
+        }
+    </script>
+    
+    
+    </body>
+
+
+</html>
